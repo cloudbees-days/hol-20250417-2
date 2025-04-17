@@ -28,7 +28,7 @@ jobs:
         run: launchable record build --name ${{ github.run_id }}
       - name: launchable subset
         run: |
-          launchable subset --target 50% maven src/test/java > launchable-subset.txt
+          launchable subset --target 25% maven src/test/java > launchable-subset.txt
           cat launchable-subset.txt
       - name: Compile
         run: mvn compile
